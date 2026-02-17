@@ -1,11 +1,66 @@
-/* 
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
+.container {
+  max-width: 600px;
+  margin: 40px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
 
-*/
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+  font-weight: 600;
+  font-size: 2em;
+}
+
+.form-control {
+  border: 2px solid #ddd;
+  padding: 12px;
+  font-size: 1em;
+  border-radius: 8px;
+  transition: border-color 0.3s;
+}
+
+.form-control:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+}
+
+.list-group-item {
+  border: 1px solid #eee;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  transition: all 0.3s;
+}
+
+.list-group-item:hover {
+  background-color: #f0f0f0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transform: translateX(5px);
+}
+
+.btn-danger {
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+
+.btn-danger:hover {
+  opacity: 1;
+}
+
+.text-muted {
+  color: #999;
+  font-style: italic;
+}
