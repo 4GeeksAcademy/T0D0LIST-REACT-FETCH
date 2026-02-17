@@ -20,7 +20,7 @@ function saveLocal(list) {
   try {
     window.localStorage.setItem(LOCAL_KEY, JSON.stringify(list));
   } catch (e) {
-    // ignore
+
   }
   return list;
 }
@@ -45,8 +45,6 @@ export async function getTodos() {
   }
 }
 
-// The playground user API normally expects the full list to be sent with PUT.
-// Some deployments return 405 for PUT; try POST as a fallback.
 async function putTodos(list) {
   const opts = {
     method: "PUT",
@@ -65,7 +63,6 @@ async function putTodos(list) {
       return saveLocal(list);
     }
 
-    // other server error -> fallback to local
     return saveLocal(list);
   } catch (e) {
     return saveLocal(list);
